@@ -16,7 +16,7 @@
 地址：http://www.longstudy.club/vue-okr-tree-doc/index.html
 
 
-## vue-okr-tree
+## wm-vue-tree
 
 基于 Vue 2的组织架构树组件
 
@@ -24,17 +24,17 @@
 
 ```
 # use npm
-npm i vue-okr-tree
+npm i wm-vue-tree
 
 # use yarn
-yarn add vue-okr-tree
+yarn add wm-vue-tree
 ```
 ## Quick Start
 
 ``` js
 
-import {VueOkrTree} from 'vue-okr-tree';
-import 'vue-okr-tree/dist/vue-okr-tree.css'
+import {WMVueTree} from 'wm-vue-tree';
+import 'wm-vue-tree/dist/wm-vue-tree.css'
 
 // ...
 ```
@@ -74,6 +74,7 @@ import 'vue-okr-tree/dist/vue-okr-tree.css'
 | filter-node-method | 对树节点进行筛选时执行的方法，返回 true 表示这个节点可以显示，返回 false 则表示这个节点会被隐藏 |  Function(value, data, node) |  — | —
 | aniamte | 是否开启节点展开的过渡动画 |  Boolean |  — |  false
 | animate-name | 过渡动画名称，支持动画类型有 okr-fade-in-linear/okr-fade-in/okr-zoom-in-center/okr-zoom-in-top/okr-zoom-in-bottom |  String |  — |  okr-zoom-in-center
+| status | 是否节点的状态：0、禁用，1、启用 |  Boolean |  — |  false
 
 #### props
 
