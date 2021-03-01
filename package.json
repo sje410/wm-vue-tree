@@ -1,6 +1,6 @@
 {
   "name": "wm-vue-tree",
-  "version": "1.1.30",
+  "version": "1.1.31",
   "main": "dist/wm-vue-tree.umd.min.js",
   "scripts": {
     "dev": "vue-cli-service serve --open",

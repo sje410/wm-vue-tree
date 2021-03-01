@@ -133,6 +133,11 @@ export default {
       type: Boolean,
       default: false
     },
+    // 是否启用选中状态
+    isDisabled: {
+      type: Boolean,
+      default: false
+    }
   },
   computed: {
     ondeClass() {
@@ -168,7 +173,8 @@ export default {
       animateName: this.animateName,
       icon: this.icon,
       iconClassName: this.iconClassName,
-      status: this.status
+      status: this.status,
+      isDisabled: this.isDisabled
     });
     this.root = this.store.root;
   },
@@ -625,6 +631,7 @@ export default {
   box-shadow: 0 1px 14px rgba(31, 35, 41, 0.12);
   cursor: pointer;
 }
+
 .horizontal .org-chart-node-label .org-chart-node-btn {
   position: absolute;
   left: 100%;
