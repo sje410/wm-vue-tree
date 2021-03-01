@@ -1,0 +1,55 @@
+{
+  "name": "wm-vue-tree",
+  "version": "1.1.30",
+  "main": "dist/wm-vue-tree.umd.min.js",
+  "scripts": {
+    "dev": "vue-cli-service serve --open",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --mode production",
+    "build:dev": "vue-cli-service build --mode development",
+    "build:lib": "vue-cli-service build --target lib  --name wm-vue-tree src/lib/index.js",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^2.6.5",
+    "github-markdown-css": "^4.0.0",
+    "prismjs": "^1.22.0",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
+    "@vue/eslint-config-prettier": "^5.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "prettier": "^1.18.2",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "description": "一个特殊布局模式结构的`vue Tree`组件",
+  "keywords": [
+    "vue-chart",
+    "vue-tree",
+    "org-tree",
+    "chart",
+    "tree",
+    "org",
+    "okr",
+    "vue-ork-tree"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Terry",
+    "email": "466209365@qq.com",
+    "url": "https://github.com/qq466209365"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qq466209365/wm-vue-tree"
+  },
+  "bugs": {
+    "url": "https://github.com/qq466209365/wm-vue-tree/issues"
+  }
+}
