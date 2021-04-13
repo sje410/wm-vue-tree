@@ -111,7 +111,9 @@ export default {
           type: "type",
           disabled: "disabled",
           status: "status",
-          selected: "selected"
+          selected: "selected",
+          expireTime: "expireTime",
+          expireType: "expireType",
         };
       }
     },
@@ -343,7 +345,7 @@ export default {
 .vertical .org-chart-node-label .org-chart-node-label-inner {
   box-shadow: 0 1px 10px rgba(31, 35, 41, 0.08);
   display: inline-block;
-  padding: 5px 10px;
+  padding: 5px 5px;
   margin: 0;
   font-size: 14px;
   word-break: break-all;
@@ -445,7 +447,7 @@ export default {
   top: 0;
   left: 0;
   width: 20px;
-  height: 50%;
+  height: 52%;
 }
 .horizontal .is-left-child-node:before,
 .horizontal .is-left-child-node::after {
@@ -567,18 +569,18 @@ export default {
 .horizontal .org-chart-node-label .org-chart-node-label-inner {
   box-shadow: 0 1px 10px rgba(31, 35, 41, 0.08);
   display: inline-block;
-  padding: 5px 10px;
-  margin: 10px 10px 10px 0;
-  font-size: 14px;
+  padding: 5px 5px;
+  margin: 5px 5px 5px 0;
+  font-size: 12px;
   word-break: break-all;
 }
 
 .horizontal .org-chart-node-label .org-chart-node-label-inner-disabled {
   box-shadow: 0 1px 10px rgba(31, 35, 41, 0.08);
   display: inline-block;
-  padding: 5px 10px;
-  margin: 10px 10px 10px 0;
-  font-size: 14px;
+  padding: 5px 5px;
+  margin: 5px 5px 5px 0;
+  font-size: 12px;
   word-break: break-all;
   color: rgba(0, 0, 0, 0.25);
   border: 1px solid #cccccc;
@@ -587,9 +589,9 @@ export default {
 
 .horizontal .org-chart-node-label .org-chart-node-label-inner-text-disabled {
   display: inline-block;
-  padding: 5px 10px;
-  margin: 10px 10px 10px 0;
-  font-size: 14px;
+  padding: 5px 5px;
+  margin: 5px 5px 5px 0;
+  font-size: 12px;
   word-break: break-all;
   color: rgba(0, 0, 0, 0.25);
   background: #fafafa;
@@ -619,7 +621,7 @@ export default {
   display: inline-block;
   padding: 5px 5px;
   margin: 10px 5px 10px 5px;
-  font-size: 14px;
+  font-size: 12px;
   word-break: break-all;
 }
 

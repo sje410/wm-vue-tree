@@ -111,7 +111,16 @@ export default class Node {
   get status() {
     return getPropertyFromData(this, "status");
   }
-  // 是否是 OKR 飞书模式
+  get expireTime() {
+    return getPropertyFromData(this, "expireTime");
+  }
+  get expireType() {
+    return getPropertyFromData(this, "expireType");
+  }
+  get selected() {
+    return getPropertyFromData(this, "selected");
+  }
+  // 是否是 飞书模式
   hasLeftChild() {
     const store = this.store;
     return store.onlyBothTree && store.direction === "horizontal";

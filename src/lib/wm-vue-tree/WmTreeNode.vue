@@ -71,6 +71,9 @@
                     :title="node.name">{{ node.name }}</span>
             </slot>
           </node-content>
+          <template v-if="node.expireType === 0 || node.expireType === 2">
+            <span :title="'该权限项<'+node.name+'>有效期为 '+node.expireTime+' 天'" style="margin: 0 5px;" class="m-l-xs">（{{ node.expireTime }} 天）</span>
+          </template>
           <template v-if="this.tree.store.status"><span v-if="node.status !== undefined" class="m-l-xs"
                                                         :class="node.status === 1 ? 'tree-open' : 'tree-close'">{{
               node.status === 1 ? '启用' : '禁用'
@@ -91,28 +94,31 @@
                     :title="node.name">{{ node.name }}</span>
             </slot>
           </node-content>
+          <template v-if="node.expireType === 0 || node.expireType === 2">
+            <span :title="'该权限项<'+node.name+'>有效期为 '+node.expireTime+' 天'" style="margin: 0 5px;" class="m-l-xs">（{{ node.expireTime }} 天）</span>
+          </template>
           <template v-if="this.tree.store.status"><span v-if="node.status !== undefined" class="m-l-xs"
                                                         :class="node.status === 1 ? 'tree-open' : 'tree-close'">{{
               node.status === 1 ? '启用' : '禁用'
             }}</span>
           </template>
         </div>
-      <div
-          v-if="showNodeBtn && !isLeftChildNode"
-          class="org-chart-node-btn"
-          :class="{ expanded: node.expanded }"
-          @click="handleBtnClick('right')">
-        <template v-if="showNodeNum">
+        <div
+            v-if="showNodeBtn && !isLeftChildNode"
+            class="org-chart-node-btn"
+            :class="{ expanded: node.expanded }"
+            @click="handleBtnClick('right')">
+          <template v-if="showNodeNum">
           <span v-if="!node.expanded " class="org-chart-node-btn-text">
             {{ node.childNodes.length }}
           </span>
-        </template>
-        <node-btn-content v-else :node="node">
-          <slot>
-            <div class="org-chart-node-btn-text">10</div>
-          </slot>
-        </node-btn-content>
-      </div>
+          </template>
+          <node-btn-content v-else :node="node">
+            <slot>
+              <div class="org-chart-node-btn-text">10</div>
+            </slot>
+          </node-btn-content>
+        </div>
     </div>
     <transition :duration="animateDuration" :name="animateName">
       <div
